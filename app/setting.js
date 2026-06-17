@@ -4,13 +4,12 @@ import { useFonts } from 'expo-font';
 import { useEffect, useRef, useState } from 'react';
 import {
   Alert,
-  Linking,
   Modal,
   ScrollView,
   Text,
   TextInput,
   TouchableOpacity,
-  View,
+  View
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import i18n from '../i18n';
@@ -649,25 +648,6 @@ export default function SettingScreen() {
             <Text style={{ color: "#0d754f", fontWeight:"400", fontSize: 25, fontFamily:"Estedad"}}>
               {i18n.t("sign_out")}
             </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => {
-            Linking.openURL("https://www.buymeacoffee.com/yourname");
-            }}
-            style={{
-             width: "100%",
-             padding: 20,
-             borderWidth: 1,
-             borderColor: "#161616",
-             justifyContent: "center",
-             alignItems: "center",
-             marginBottom: 10,
-             borderRadius: 0,
-            }}
-          >
-           <Text style={{ color: "#f5c542", fontSize: 25, fontFamily: "Estedad" }}>
-              {i18n.t("Support Developer")}
-           </Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => removeAccount()}
