@@ -13,8 +13,7 @@
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/app.png",
-        "jsEngine": "hermes"
+        "foregroundImage": "./assets/images/app.png"
       },
       "predictiveBackGestureEnabled": false,
       "package": "com.fifimamy.VeluraMedical"
