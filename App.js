@@ -39,7 +39,7 @@ export default function App() {
     <NavigationContainer>
      <Stack.Navigator 
      screenOptions={{ headerShown: false }}
-     initialRouteName={SCREENS.SIGN_IN}>
+     initialRouteName="SIGN_IN">
 
        <Stack.Screen name={SCREENS.SPLASH} component={SplashScreen} />
        <Stack.Screen name={SCREENS.SIGN_IN} component={SignInScreen} />
