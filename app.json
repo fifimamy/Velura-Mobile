@@ -4,7 +4,7 @@
     "slug": "Velura-Medical",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/app.png",
+    "icon": "./assets/image99/app.png",
     "scheme": "veluramedical",
     "userInterfaceStyle": "automatic",
     "ios": {
@@ -13,14 +13,14 @@
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/app.png"
+        "foregroundImage": "./assets/image99/app.png"
       },
       "predictiveBackGestureEnabled": false,
       "package": "com.fifimamy.VeluraMedical"
     },
     "web": {
       "output": "single",
-      "favicon": "./assets/images/app.png"
+      "favicon": "./assets/image99/app.png"
     },
     "plugins": [
       "expo-localization",
