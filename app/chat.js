@@ -291,13 +291,11 @@ const [messages, setMessages] = useState([]);
 
   const copyMessage = async (text) => {
     await Clipboard.setString(normalizeMessageText(text));
-    Alert.alert(i18n.t("copied"));
     setMessageOptions(false);
   };
 
   const copyText = async (text) => {
     await Clipboard.setString(normalizeMessageText(text));
-    Alert.alert(i18n.t("copied"));
   };
 
   const setAiFeedback = async (messageId, feedback) => {
@@ -497,7 +495,7 @@ const openCamera = async () => {
   const permission = await ImagePicker.requestCameraPermissionsAsync();
 
   if (!permission.granted) {
-    alert(i18n.t("camera"));
+
     return;
   }
 
@@ -520,7 +518,6 @@ const openGallery = async () => {
   const permission = await ImagePicker.requestMediaLibraryPermissionsAsync();
 
   if (!permission.granted) {
-    alert(i18n.t("gallery"));
     return;
   }
 
@@ -782,7 +779,7 @@ const openGallery = async () => {
       console.log("ERROR MESSAGE:", error?.message);
 
     if (error.name !== 'AbortError' && isMountedRef.current) {
-      Alert.alert("خطأ", "تعذر الاتصال بالسيرفر");
+      Alert.alert("Error", "Unable to connect to the server");
     }
 
     console.log(error);
