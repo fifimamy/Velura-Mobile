@@ -24,37 +24,41 @@ export default function App() {
   const [loadingAuth, setLoadingAuth] = useState(true);
   const [appReady, setAppReady] = useState(false);
 
-  // 🔥 SPLASH CONTROL (مرة واحدة فقط)
   useEffect(() => {
     SplashScreen.preventAutoHideAsync();
 
-    const prepareApp = async () => {
+    const init = async () => {
       try {
         const savedLang = await getLanguage();
         if (savedLang) i18n.locale = savedLang;
-
-        setAppReady(true);
       } catch (e) {
-        console.log("Init error:", e);
+        console.log(e);
       } finally {
+        setAppReady(true);
         await SplashScreen.hideAsync();
       }
     };
 
-    prepareApp();
+    init();
   }, []);
 
-  // 🔥 AUTH LISTENER (Firebase هو مصدر الحقيقة)
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (u) => {
+    const unsub = onAuthStateChanged(auth, (u) => {
       setUser(u);
       setLoadingAuth(false);
     });
 
-    return unsubscribe;
+    return unsub;
   }, []);
 
-  if (!appReady || loadingAuth) return null;
+  // 🔥 مهم جدًا: لا ترجع null
+  if (!appReady || loadingAuth) {
+    return (
+      <NavigationContainer>
+        <SplashScreenUI />
+      </NavigationContainer>
+    );
+  }
 
   return (
     <NavigationContainer>
