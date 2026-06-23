@@ -1,5 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { onAuthStateChanged } from 'firebase/auth';
 import { useEffect, useState } from 'react';
 import 'react-native-gesture-handler';
 import ChatScreen from './app/chat';
@@ -11,10 +12,22 @@ import SignInScreen from './app/sign_in';
 import SplashScreen from './app/splash';
 import UserInformation from './app/user_information';
 import i18n from './i18n';
+import { auth } from './services/firebase';
 import { getLanguage } from './services/storage';
+
 const Stack = createNativeStackNavigator(); 
+
 export default function App() { 
+  const [user, setUser] = useState(undefined);
   const [lang, setLang] = useState("en"); 
+  
+  useEffect(() => {
+  const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
+    setUser(firebaseUser);
+  });
+
+  return unsubscribe;
+}, []);
   useEffect(() => { 
     const loadLanguage = async () => { 
       const savedLang = await getLanguage(); 
@@ -24,11 +37,19 @@ export default function App() {
       } }; 
       loadLanguage(); 
     }, []); 
+    if (user === undefined) {
+  return null;
+}
     return ( 
     <NavigationContainer> 
-      <Stack.Navigator 
-      screenOptions={{ headerShown: false }} initialRouteName={SCREENS.SPLASH}
-      > 
+      <Stack.Navigator
+  screenOptions={{ headerShown: false }}
+  initialRouteName={
+    user
+      ? SCREENS.CHAT
+      : SCREENS.SPLASH
+  }
+>
         <Stack.Screen name={SCREENS.SPLASH} component={SplashScreen} /> 
         <Stack.Screen name={SCREENS.SIGN_IN} component={SignInScreen} /> 
         <Stack.Screen name={SCREENS.CREATE_ACCOUNT} component={CreateAccountScreen} /> 
