@@ -1,41 +1,29 @@
-import { useNavigation } from '@react-navigation/native';
 import { Audio } from 'expo-av';
 import { useFonts } from 'expo-font';
 import { useEffect } from 'react';
 import { Image, ImageBackground, Text, View } from 'react-native';
-import { SCREENS } from './constants';
-
 
 export default function SplashScreen() {
-  
-  const navigation = useNavigation();
 
   const playSound = async () => {
-  const { sound } = await Audio.Sound.createAsync(
-    require('../assets/sounds/splash.mp3')
-  );
+    try {
+      const { sound } = await Audio.Sound.createAsync(
+        require('../assets/sounds/splash.mp3')
+      );
 
-  await sound.playAsync();
-};
+      await sound.playAsync();
+    } catch (e) {
+      console.log("Sound error:", e);
+    }
+  };
 
   useEffect(() => {
-
-    console.log("Splash mounted");
     playSound();
-   const timer = setTimeout(() => {
-    console.log("Trying navigation...");
-    if (navigation?.replace) {
-      navigation.replace(SCREENS.SIGN_IN);
-    }
-  }, 5000);
-
-  return () => clearTimeout(timer);
-  }, [navigation]);
+  }, []);
 
   const [loaded] = useFonts({
-  Estedad: require('../assets/fonts/Estedad-VariableFont_wght.ttf'),
-  PlayfairDisplay: require('../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf'),
-  Estedad: require('../assets/fonts/Estedad-VariableFont_wght.ttf'),
+    Estedad: require('../assets/fonts/Estedad-VariableFont_wght.ttf'),
+    PlayfairDisplay: require('../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf'),
   });
 
  return (
