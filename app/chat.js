@@ -76,7 +76,6 @@ const [messages, setMessages] = useState([]);
   };
 
 
-
   useEffect(() => {
   const setupAudio = async () => {
     await Audio.setAudioModeAsync({
@@ -1466,7 +1465,7 @@ const loadChatHistory = async () => {
                  color: "#ffffff"
                }}
              />
-             <TouchableOpacity
+             {/* <TouchableOpacity
                onPress={() => {
                  setFileMenu(true);
                  playSound4();
@@ -1529,7 +1528,7 @@ const loadChatHistory = async () => {
                     </View>
                  </View>
                </View>
-             </Modal>
+             </Modal> */}
            </View>
 
            <TouchableOpacity
