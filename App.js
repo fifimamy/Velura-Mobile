@@ -12,7 +12,6 @@ import * as SplashScreen from 'expo-splash-screen';
 
 import ChatScreen from './app/chat';
 import CreateAccountScreen from './app/create_account';
-import ResetPasswordScreen from './app/reset_password';
 import SettingScreen from './app/setting';
 import SignInScreen from './app/sign_in';
 import SplashScreenUI from './app/splash';
@@ -20,8 +19,7 @@ import SplashScreenUI from './app/splash';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const [user, setUser] = useState(null);
-  const [loadingAuth, setLoadingAuth] = useState(true);
+  const [user, setUser] = useState(undefined); // مهم: undefined
   const [appReady, setAppReady] = useState(false);
 
   useEffect(() => {
@@ -29,10 +27,8 @@ export default function App() {
 
     const init = async () => {
       try {
-        const savedLang = await getLanguage();
-        if (savedLang) i18n.locale = savedLang;
-      } catch (e) {
-        console.log(e);
+        const lang = await getLanguage();
+        if (lang) i18n.locale = lang;
       } finally {
         setAppReady(true);
         await SplashScreen.hideAsync();
@@ -44,15 +40,14 @@ export default function App() {
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, (u) => {
-      setUser(u);
-      setLoadingAuth(false);
+      setUser(u); // null = not logged, object = logged
     });
 
     return unsub;
   }, []);
 
-  // 🔥 مهم جدًا: لا ترجع null
-  if (!appReady || loadingAuth) {
+  // 🔥 مهم جدًا: لا توقف التطبيق
+  if (!appReady || user === undefined) {
     return (
       <NavigationContainer>
         <SplashScreenUI />
@@ -74,7 +69,6 @@ export default function App() {
             <Stack.Screen name={SCREENS.SPLASH} component={SplashScreenUI} />
             <Stack.Screen name={SCREENS.SIGN_IN} component={SignInScreen} />
             <Stack.Screen name={SCREENS.CREATE_ACCOUNT} component={CreateAccountScreen} />
-            <Stack.Screen name={SCREENS.RESET_PASSWORD} component={ResetPasswordScreen} />
           </>
         )}
 
