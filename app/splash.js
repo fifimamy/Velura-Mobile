@@ -33,7 +33,7 @@ export default function SplashScreen() {
           style={{ width:200, height:200, justifyContent : "center", alignContent: "center" }} /> 
           <Text 
            style ={{ fontSize:28, fontWeight: "bold", color: "#dbdbdb", lineHeight : 30, justifyContent :"center", alignContent :"center", fontFamily: "Estedad" }} 
-           >VELURA MEDICAL</Text> 
+           >VEXRIA MEDICAL</Text> 
           <Text 
            style ={{ fontSize:20, fontWeight: "100", color: "#c0c0c0", lineHeight : 25, justifyContent :"center", alignContent :"center", fontFamily: "PlayfairDisplay" }} >
             Inteleigent medical assistant</Text> 

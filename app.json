@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "Velura-Medical",
-    "slug": "Velura-Medical",
+    "name": "Vexria-Medical",
+    "slug": "Vexria-Medical",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/image99.png",
-    "scheme": "veluramedical",
+    "scheme": "vexriamedical",
     "userInterfaceStyle": "automatic",
     "ios": {
       "supportsTablet": true
@@ -16,7 +16,7 @@
         "foregroundImage": "./assets/images/image99.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "com.fifimamy.VeluraMedical"
+      "package": "com.fifimamy.VexriaMedical"
     },
     "web": {
       "output": "single",

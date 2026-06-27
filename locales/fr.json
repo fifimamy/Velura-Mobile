@@ -1,5 +1,5 @@
 {
-    "welcome": "Bienvenue chez Velura",
+    "welcome": "Bienvenue chez Vexria",
     "enter_your_information": "Veuillez entrer vos informations",
     "name": "Nom",
     "age": "Âge",
@@ -44,7 +44,7 @@
     "sign_in": "Se connecter",
     "or": "ou",
     "privacy_policy": "Politique de confidentialité",
-    "privacy_policy_content": "Dernière mise à jour: 2026\n\nBienvenue chez Velura.\n\nVotre vie privée est importante pour nous. Cette politique de confidentialité explique comment Velura collecte, utilise, stocke et protège vos informations lorsque vous utilisez l'application et les services y liés.\n\nEn utilisant Velura, vous acceptez les pratiques décrites dans cette politique de confidentialité.\n\n1. À propos de Velura\n\nVelura est un assistant médical conversationnel alimenté par l'intelligence artificielle conçu pour fournir des conseils et des informations médicales et informatives. Velura ne remplace pas les soins médicaux professionnels, le diagnostic ou les services d'urgence.\n\n2. Les informations que nous collectons\n\nVelura peut collecter les types d'informations suivants:\n\na) Les informations que vous fournissez\n- Les messages que vous envoyez dans les conversations\n- Les informations médicales que vous choisissez de partager\n- Les détails du profil personnel comme l'âge, le sexe, les allergies, les médicaments ou les préférences de santé\n- Les images téléchargées à des fins d'analyse\n\nb) Les informations techniques\n- Le type d'appareil\n- Les informations du système d'exploitation\n- La version de l'application\n- Les journaux de panne et les données de performance\n- Les statistiques d'utilisation anonymes\n\nc) Les informations d'authentification\nSi des systèmes de connexion comme la connexion via Google sont utilisés, Velura peut recevoir des informations limitées du compte fournies par le service d'authentification.\n\n3. Comment nous utilisons les informations\r",
+    "privacy_policy_content": "Dernière mise à jour: 2026\n\nBienvenue chez Vexria.\n\nVotre vie privée est importante pour nous. Cette politique de confidentialité explique comment Vexria collecte, utilise, stocke et protège vos informations lorsque vous utilisez l'application et les services y liés.\n\nEn utilisant Vexria, vous acceptez les pratiques décrites dans cette politique de confidentialité.\n\n1. À propos de Vexria\n\nVexria est un assistant médical conversationnel alimenté par l'intelligence artificielle conçu pour fournir des conseils et des informations médicales et informatives. Vexria ne remplace pas les soins médicaux professionnels, le diagnostic ou les services d'urgence.\n\n2. Les informations que nous collectons\n\nVexria peut collecter les types d'informations suivants:\n\na) Les informations que vous fournissez\n- Les messages que vous envoyez dans les conversations\n- Les informations médicales que vous choisissez de partager\n- Les détails du profil personnel comme l'âge, le sexe, les allergies, les médicaments ou les préférences de santé\n- Les images téléchargées à des fins d'analyse\n\nb) Les informations techniques\n- Le type d'appareil\n- Les informations du système d'exploitation\n- La version de l'application\n- Les journaux de panne et les données de performance\n- Les statistiques d'utilisation anonymes\n\nc) Les informations d'authentification\nSi des systèmes de connexion comme la connexion via Google sont utilisés, Vexria peut recevoir des informations limitées du compte fournies par le service d'authentification.\n\n3. Comment nous utilisons les informations\r",
     "contact_us": "Contactez-nous",
     "forgot_password": "J'ai oublié mon mot de passe",
     "sign_out": "Se déconnecter",
@@ -96,10 +96,10 @@
      "food_allergies":"Allergies alimentaires (par exemple arachides, lait, œufs)"
     },
     "have't_account": "Compte non trouvé",
-    "sign_in_done": "Bon retour chez Velura Medical Assistant",
+    "sign_in_done": "Bon retour chez vexria Medical Assistant",
     "wrond_password": "Mot de passe incorrect, veuillez réessayer",
     "wrong_info": "L'e-mail ou le mot de passe est incorrect, veuillez réessayer",
-    "account_created": "Bienvenue dans l'assistant médical Velura, nous sommes heureux de vous compter parmi nous ! Votre compte a été créé avec succès, vous pouvez maintenant accéder à toutes les fonctionnalités de notre application. Merci d'avoir choisi Velura !",
+    "account_created": "Bienvenue dans l'assistant médical Vexria, nous sommes heureux de vous compter parmi nous ! Votre compte a été créé avec succès, vous pouvez maintenant accéder à toutes les fonctionnalités de notre application. Merci d'avoir choisi Vexria !",
     "Fill_all_fields": "Veuillez remplir tous les champs",
     "password_length": "Le mot de passe doit contenir au moins 6 caractères",
     "select_doctor_alert": "Veuillez choisir au moins un type de médecin pour commencer la conversation",

@@ -1242,7 +1242,7 @@ const loadChatHistory = async () => {
                padding:20,
                 fontFamily: "PlayfairDisplay"
               }}
-            >Velura Medical</Text>
+            >Vexria Medical</Text>
 
            <TouchableOpacity
              onPress={() => {
